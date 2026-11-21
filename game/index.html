@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lamplight Heist</title>
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: monospace;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #hud {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            background: #161b22;
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid #30363d;
+        }
+        .hud-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        canvas {
+            border: 2px solid #30363d;
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+            background-color: #111;
+        }
+    </style>
+</head>
+<body>
+    <div id="hud">
+        <div class="hud-item">Artifacts: <span id="hud-artifacts">0/3</span></div>
+        <div class="hud-item">Detection: <span id="hud-detection">0%</span></div>
+        <div class="hud-item">Alarms: <span id="hud-alarms">0/3</span></div>
+        <div class="hud-item">Time: <span id="hud-timer">0.0s</span></div>
+        <div class="hud-item">Objective: <span id="hud-objective">Steal 3 artifacts & escape!</span></div>
+    </div>
+    <canvas id="game" width="1280" height="800"></canvas>
+
+    <script src="src/config.js"></script>
+    <script src="src/level.js"></script>
+    <script src="src/guard.js"></script>
+    <script src="src/player.js"></script>
+    <script src="src/input.js"></script>
+    <script src="src/audio.js"></script>
+    <script src="src/render.js"></script>
+    <script src="src/shots.js"></script>
+    <script src="src/main.js"></script>
+</body>
+</html>
